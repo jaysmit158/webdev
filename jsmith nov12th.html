@@ -95,20 +95,25 @@
           <h4><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
         </div>
         <div class="col-sm-6">
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <input name="name" class="form-control" type="text" placeholder="Name" required></input>
+          <form role="form" action="email.php" method="post">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input name="name" class="form-control" type="text" placeholder="Name" required></input>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input name="email" class="form-control" type="text" placeholder="Email" required></input>
+              </div>
+              <textarea name="message" class="form-control" placeholder="Message" required rows="5"></textarea></br> 
             </div>
-            <div class="col-sm-6 form-group">
-              <input name="email" class="form-control" type="text" placeholder="Email" required></input>
-            </div>
-            <textarea class="form-control" placeholder="Message" required rows="5"></textarea></br>
-          </div>
-          <div class="row">
-            <div class="col-sm-12 form-group">
-            <button class="btn btn-info pull-right" type="submit">Send</button>
-            </div>
-          </div> <!-- Ends Row -->
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-info pull-right" type="submit">Send</button>
+              </div>
+              <div class="col-sm-12 form-group">
+              <!--This will be used to display an message. --><?php echo $result; ?>
+              </div>
+            </div> <!-- Ends Row -->
+          </form>
         </div> <!-- Ends Column -->
       </div> <!-- Ends Row -->
     </div> <!--Ends Container-->
