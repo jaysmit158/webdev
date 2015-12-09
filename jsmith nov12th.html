@@ -6,8 +6,6 @@
   <link type = "text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat" >
   <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <link href="styles1.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <title>Jordan Smith | Web Developer</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,39 +42,48 @@
       <h1 class="text-center">Who Am I?</h1>
         <img class="profilepic" src="http://i64.tinypic.com/xqi70y.jpg" border="0" alt="Jordan Smith"></br>
       <p> Hello, My name is Jordan Smith.</p>
-      <p> I started learning to program in the Summer of 2015 using Codeacademy, FreeCodeCamp, and W3 School.</p>
-      <p>I am proficient with HTML5, CSS3, Javascript, PHP, and MYSQL...</p>
+      <p> I graduated from the University of Michigan in 2012 with a degree in Economics but began my career as an Accountant.</br>
+          Accounting is a great field but it wasn't something I loved.</p>
+      <p> I dedicated myself to learning code using Codeacademy, FreeCodeCamp, W3 School, StackOverFlow, and Github.</p>
+      <p> I am now proficient with HTML5, CSS3, Javascript, PHP, and MYSQL.</p>
+      <P> I use the best in front end technology including Boostrap, Modernizr, and JQuery currently in my work and will be implementing Sass as a CSS preprocessor for newer projects.</p>
+      <p> I want to enhance my skills with learning more Javascripts libraries in the near future.</p>
   </div>
 </div>
   <div id="portfolio">
     <div class="container-fluid">
        <h1 class="text-center">PORTFOLIO</h1>
     </br>
+    <!--remember to remove all port ids and item classes-->
         <div class="row">
-          <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="thumbnail">
-              <img src="http://goo.gl/0sX3jq">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP based Framework, Javascript, Photopshop</p>
             </div>
             <div class="thumbnail">
-              <img src="http://goo.gl/0sX3jq">
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-4  col-md-4 col-lg-4">
-            <div class="thumbnail">
-              <img src="http://goo.gl/Av1pac">
-            </div>
-            <div class="thumbnail">
-              <img src="http://goo.gl/Av1pac">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP Framework</p>
             </div>
           </div>
-          <div class="col-xs-6 col-sm-4  col-md-4 col-lg-4">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
             <div class="thumbnail">
-              <img src="http://goo.gl/an2HXY">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP Framework</p>
             </div>
-          </div> 
-          <div class="col-xs-6 col-sm-4  col-md-4 col-lg-4">          
             <div class="thumbnail">
-              <img src="http://goo.gl/an2HXY">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP Framework</p>
+            </div>
+          </div>
+          <div class="screensize col-sm-4 col-md-4 col-lg-4">
+            <div class="thumbnail">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP Framework</p>
+            </div>        
+            <div class="thumbnail">
+              <a href="http://www.thevapegenie.com" target="_blank"><img src="http://i63.tinypic.com/2ic2n36.jpg" alt="The Vape Genie"></a>
+              <p>The Vape Genie- An E-commerce website built using Magento CMS, a PHP Framework</p>
             </div>
           </div>
         </div>
@@ -121,7 +128,12 @@
 <footer class="container-fluid text-center">
   <!-- Set height and width with CSS -->
 <div id="googleMap" style="height:300px;width:100%;"></div>
-<!-- Add Google Maps -->
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="googlemap.js"></script>
 
@@ -148,9 +160,16 @@ $(document).ready(function(){
   });
 })
 </script>
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-</footer>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+  if $(window).width < 500 {
+    $("#portfolio").removeClass(screensize);
+  }
+});
+
+
+</script>
   </body>
 </html>
