@@ -21,4 +21,3 @@ position:myCenter,
 google.maps.event.addDomListener(window, 'load', initialize);
 
 
-//
