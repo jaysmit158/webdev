@@ -1,35 +1,76 @@
 <?php
-if (isset($_POST["submit"])) {
-$name = $_POST['name'];
-$email = $_POST['email'];
-$message = $_POST['message'];
 
-$from = 'Web Development Contact Form'; 
-$to = 'jaysmit158@gmail.com'; 
-$subject = 'Message from Web Development Portfolio ';
- 
-$body = "From: $name\n E-Mail: $email\n Message:\n $message";
+if (isset($_POST['email'])) {
+    require __DIR__ . '/swiftmailer/swift_required.php';
 
-//form validation
-// Check if name has been entered
-if (!$_POST['name']) {
-    $errName = 'Please enter your name';
-}
-//Check if email has been entered
-if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $errEmail = 'Please enter a valid email address';
-}
-//Check if message has been entered
-if (!$_POST['message']) {
-    $errMessage = 'Please enter your message';
-}
-//if no errors
-if (!$errName && !$errEmail && !$errMessage) {
-    if (mail ($to, $subject, $body, $from)) {
-        $result='<div class="alert alert-success">Thank You! I will be in touch!89203</div>';
-    } else {
-        $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+    //==== START EDIT
+    $email_to_address = "jaysmit158@gmail.com"; 
+    $email_from_address = "jordan@jsmithwebdev.com";
+    $email_from_name = "Jsmith Web Dev Inquiry";
+    $email_subject = "Message from Jsmith Web Dev Inquiry";
+    //==== END EDIT
+
+    function died($error)
+    {
+        echo "We are very sorry, but there were error(s) found with the form you
+           submitted. ";
+        echo "These errors appear below.<br /><br />";
+        echo $error . "<br /><br />";
+        echo "Please go back and fix these errors.<br /><br />";
+        die();
     }
+
+    // Validation expected data exists
+    if (!isset($_POST['name']) ||
+        !isset($_POST['email']) ||
+        !isset($_POST['message'])
+    ) {
+        died('We are sorry, but there appears to be a problem with the form you
+        submitted.');
+    }
+
+    // Get user input
+    $name = $_POST['name']; // required
+    $email = $_POST['email']; // required
+    $phone = $_POST['phone']; // required
+    $message = $_POST['message']; // required
+
+    $error_message = "";
+
+    // Validate user name
+    $string_exp = "/^[A-Za-z0-9 .'-]+$/";
+    if (!preg_match($string_exp, $name)) {
+        $error_message .= 'The  Name you entered does not appear to be valid.<br />';
+    }
+
+    // Validate user email
+    $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
+    if (!preg_match($email_exp, $email)) {
+        $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
+    }
+
+    // Quit on error
+    if (strlen($error_message) > 0) {
+        died($error_message);
+    }
+
+    // Create the Transport
+    $transport = \Swift_SmtpTransport::newInstance('smtp.sendgrid.net', 587)
+        ->setUsername('jaysmit158')
+        ->setPassword('gamester2');
+
+    // Create the Mailer using your created Transport
+    $mailer = \Swift_Mailer::newInstance($transport);
+
+    // Create a message
+    $message = \Swift_Message::newInstance($email_subject)
+        ->setFrom([$email_from_address => $email_from_name])
+        ->setTo([$email_to_address])
+        ->setBody("Inquiry from Website:\n\n\tName: {$name}\n\tEmail: {$email}\n\tMessage: {$message}\n");
+
+    // Send the message
+    $result = $mailer->send($message);
+
+    // Redirect user request
+    header("Location:index.html");
 }
-}
-?>
