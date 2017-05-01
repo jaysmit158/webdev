@@ -197,6 +197,9 @@ body {
   max-width: 1400px;
   margin: 0 auto; }
 
+.visible {
+  display: block; }
+
 #upcoming {
   display: none;
   margin: auto; }
