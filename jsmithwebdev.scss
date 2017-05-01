@@ -253,13 +253,16 @@ body {
   margin:0 auto;
 }
 
-.visible {
+.hide {
+  display:none;
+}
+
+.show {
   display:block;
 }
 
 #upcoming {
-  display:none;
-  margin:auto;
+  margin:0 auto;
 }
 
 #view-more {
