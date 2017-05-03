@@ -170,6 +170,8 @@ body {
   #about .container-fluid {
     text-align: left;
     color: #000; }
+  #about h1 {
+    margin-bottom: 30px; }
 
 .profile {
   float: left;
