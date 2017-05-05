@@ -208,13 +208,14 @@ body {
     width: 100%;
     display: block; }
   .thumbnail p {
-    margin: 0px 10px;
+    padding: 0 30px;
     position: relative;
     overflow: hidden;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; }
+    color: #fff;
+    font-size: 1.2em; }
 
 .wrapper {
   max-width: 1400px;
