@@ -138,18 +138,18 @@
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="thumbnail">
-              <img src="img/sundaespa2.jpg" alt="Sundae Spa E-commerce Page" title="Sundae Spa E-commerce Page">
-              <div class="overlay">
-                <a href="http://sundaespa.com/shop/" target="_blank">
-                  <p>Sundae Spa- An E-commerce page built with HTML5, CSS3, Javascript, JQuery, PHP, and Paypal.</p>
-                </a>
-              </div>
-            </div>
-            <div class="thumbnail">
               <img src="img/bonjo.jpg" alt="Bonjo Coffee Roasters" title="Bonjo Coffee Roasters">
               <div class="overlay">
                 <a href="http://www.bonjocoffee.com" target="_blank">
                   <p>Bonjo Coffee Roasters- An E-commerce website built using Magento CMS, CSS3, Javascript, JQuery, and Photoshop.</p>
+                </a>
+              </div>
+            </div>
+            <div class="thumbnail">
+              <img src="/img/ajaxboilerparts.jpg" alt="Ajax Boiler Parts" title="Ajax Boiler Parts">
+              <div class="overlay">
+                <a href="http://ajaxboiler.com/" target="_blank">
+                  <p>Ajax Boiler Parts-A redeveloped website is under construction.</p>
                 </a>
               </div>
             </div>
@@ -164,8 +164,8 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button id="view-more">View Upcoming</button>
-            <div class="thumbnail hide" id="upcoming">
-              <img src="/img/hubbellheaters.jpg" alt="Hubbell Heaters" title="Hubbell Heaters">
+            <div class="thumbnail hide show" id="upcoming">
+              <img src="/img/hubbellheaters.jpg" alt="Hubbell Heaters" title="Hubbell Heaters" data-pagespeed-url-hash="3770116493" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
               <div class="overlay">
                 <a href="http://hubbellheaters.com/" target="_blank">
                   <p>Hubbell Heaters-A redeveloped website is under construction.</p>
@@ -190,7 +190,7 @@
             <h4><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
           </div>
           <div class="col-sm-5">
-            <form name="sentMessage" id="contactForm" action="email.php" method="post">
+            <form name="sentMessage" id="contactForm" action="./email.php" method="post">
               <div class="row">
                 <div class="col-sm-6 form-group form-name">
                   <input type="text" class="form-control" placeholder="Your Name *" id="name" name="user_name" required>
@@ -283,10 +283,10 @@
 
   //reveal upcoming projects
 
-  var upcoming = document.getElementById('upcoming');
   var viewMore = document.getElementById('view-more');
+  var upcoming = document.getElementById('.upcoming');
 
-  viewMore.onclick = function() {
+  viewMore.onclick = () => {
     upcoming.classList.toggle('show');
   }
   </script>
