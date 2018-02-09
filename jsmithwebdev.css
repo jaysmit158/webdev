@@ -278,10 +278,13 @@ body {
     margin-top: 5px; } }
 @media screen and (max-width: 480px) {
   #about p {
-    font-size: 16px; } }
-@media screen and (max-width: 480px) {
+    font-size: 16px; }
+
   #portfolio {
-    font-size: 14px; } }
+    font-size: 14px; }
+
+  #contact {
+    padding: 50px; } }
 @media screen and (max-width: 768px) {
   .profile {
     width: 250px;
@@ -312,7 +315,13 @@ body {
     display: none; }
 
   .box .imagetiny {
-    display: block; } }
+    display: block; }
+
+  .form-group {
+    padding: 0; }
+
+  .form-wrapper {
+    width: 90%; } }
 @media screen and (max-width: 499px) {
   .text-editor-wrap {
     display: none !important; } }
