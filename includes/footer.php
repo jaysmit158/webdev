@@ -12,15 +12,15 @@
             <p><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
           </div>
           <div class="form-wrapper">
-            <form name="sentMessage" id="contactForm" action="./email.php" method="post">
+            <form name="sentMessage" id="contactForm" action="./email2.php" method="post">
               <div class="row">
                 <div class="col-sm-6 form-group form-name">
-                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="user_name" required>
+                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value=<?php echo $name; ?> required>
                 </div>
                 <div class="col-sm-6 form-group form-email">
-                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="user_email" required>
+                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value=<?php echo $email; ?> required>
                 </div>
-                <textarea class="form-control" placeholder="Your Message *" id="message" name="user_message" rows="4" required></textarea>
+                <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required><?php echo $message; ?></textarea>
               </div>
               <div class="row">
                 <div class="col-sm-12 text-center form-group">

@@ -1,4 +1,9 @@
-<?php include ('includes/header.php') ?>
+<?php 
+
+  include ('includes/header.php');
+  include ('email2.php');
+  
+ ?>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
   <!--navigation bar starts here-->
@@ -161,5 +166,5 @@
       </div>
     </div>
   </div>
-<?php include ('includes/footer.php') ?>
+<?php include ('includes/footer.php'); ?>
   
