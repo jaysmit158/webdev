@@ -15,14 +15,14 @@
             <form name="sentMessage" id="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
               <div class="row">
                 <div class="col-sm-6 form-group form-name">
-                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>" required>
+                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>">
                   <span class="error">* <?php echo $name_error; ?></span>
                 </div>
                 <div class="col-sm-6 form-group form-email">
-                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>" required>
+                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>">
                   <span class="error">* <?php echo $email_error; ?></span>
                 </div>
-                <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required><?php echo $message; ?></textarea>
+                <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4"><?php echo $message; ?></textarea>
                 <span class="error">* <?php echo $message_error; ?></span>
               </div>
               <div class="row">
