@@ -1,7 +1,7 @@
 <?php 
-
-  include ('includes/header.php');
-  include ('email2.php');
+  
+  include ('./includes/header.php');
+  include ('./email2.php');
   
  ?>
 
@@ -109,7 +109,7 @@
               </div>
             </div>
             <div class="thumbnail">
-              <img class="border" src="img/hubbellrentals.jpg" alt="Water Heater Rental Program" title="Hubbell Rentals">
+              <img class="border" src="img/hubbellrental.jpg" alt="Water Heater Rental Program" title="Hubbell Rentals">
               <div class="overlay">
                 <a href="https://rentawaterheater.com" target="_blank">
                   <p>Hubbell Rentals- A business website built with HTML5, CSS3, Bootstrap 4, Javascript, and PHP.</p>
@@ -166,5 +166,5 @@
       </div>
     </div>
   </div>
-<?php include ('includes/footer.php'); ?>
+<?php include ('./includes/footer.php'); ?>
   
