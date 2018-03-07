@@ -16,16 +16,18 @@
           <div class="form-wrapper">
             <form name="sentMessage" id="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
               <div class="row">
+                <div class="success"><?php echo $success; ?></div>
                 <div class="col-sm-6 form-group form-name">
-                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="">
+                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>">
                   <span class="error"><?php echo $name_error; ?></span>
                 </div>
                 <div class="col-sm-6 form-group form-email">
-                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="">
+                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>">
                   <span class="error"><?php echo $email_error; ?></span>
                 </div>
                 <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4"></textarea>
                <span class="error"><?php echo $message_error; ?></span>
+               <div class="success"><?php echo $success; ?></div>
               </div>
               <div class="row">
                 <div class="col-sm-12 text-center form-group">
