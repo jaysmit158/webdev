@@ -186,23 +186,23 @@
                 <p><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
             </div>
             <div class="form-wrapper">
-                <form name="sentMessage" id="contactForm" action="#" method="post">
+                <form id="contactForm" netlify>
                 <div class="row">
-                    <div class="success"><?php echo $success; ?></div>
+                    <div class="success"></div>
                     <div class="col-sm-6 form-group form-name">
-                    <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>" required>
-                    <span class="error"><?php echo $name_error; ?></span>
+                    <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="" required>
+                    <span class="error"></span>
                     </div>
                     <div class="col-sm-6 form-group form-email">
-                    <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>" required>
-                    <span class="error"><?php echo $email_error; ?></span>
+                    <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="" required>
+                    <span class="error"></span>
                     </div>
                     <div class="col-sm-12 form-group form-google">
                     <input name="g-recaptcha-response" id="g-recaptcha-response" type="hidden">
                     </div>
                     <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required></textarea>
-                <span class="error"><?php echo $message_error; ?></span>
-                <div class="success"><?php echo $success; ?></div>
+                <span class="error"></span>
+                <div class="success"></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 text-center form-group">
@@ -223,7 +223,7 @@
   <!--Ends Contact-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+  <!--<script src="https://www.google.com/recaptcha/api.js?render= echo SITE_KEY "></script>
   <script>
     //var submit = document.querySelector("button[type='submit']");
     grecaptcha.ready(function() {
@@ -231,7 +231,7 @@
         document.querySelector("#g-recaptcha-response").value = token;
       });
     });
-  </script>
+  </script>-->
   <script src="/typed.min.js"></script>
   <script>
   $(function() {
