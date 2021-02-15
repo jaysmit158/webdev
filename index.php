@@ -4,7 +4,6 @@
   include ('./email2.php');
   
  ?>
-
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="10">
   <!--navigation bar starts here-->
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,9 +60,8 @@
         <p> Hello, My name is Jordan Smith.</p>
         <p> I graduated from the University of Michigan with a degree in Economics and began my career in Accounting. Accounting is an important field but it was not something I could see myself doing long term.</p>
         <p>Reminded of an old interest I began learning to code using Codecademy, FreeCodeCamp, W3 Schools, StackOverFlow, TeamTreeHouse and Github.</p>
-        <p>I have a working knowledge with HTML5, CSS3, Sass, Bootstrap, Javascript, JQuery, Gulp, Git, and PHP.</p>
-        <p> I am currently learning to use the React Library and looking into picking up Python as a backend language.</p>
-        <p>I currently am working to become more capable with both frontend and backend programming.</p>
+        <p>I have a working knowledge with Front End Development including HTML5, CSS3, Sass, Javascript (ES6+), VueJS, Git, and PHP.</p>
+        <p>I currently am working to become more capable with both frontend and backend programming. I plan on learning node and python in the near future.</p>
       </div>
     </div>
   </div>
@@ -73,15 +71,34 @@
         <h1 class="text-center">PORTFOLIO</h1>
         <br>
         <div class="row slideanim">
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div class="thumbnail">
+              <img class="border" src="img/thevapegenie.jpg" alt="House of Sussie" title="The Vape Genie">
+              <div class="overlay">
+                <a href="http://www.houseofsussie.com" target="_blank">
+                  <p>House of Sussie- An E-commerce website built using Woocommerce</p>
+                </a>
+              </div>
+            </div>
+            <div class="thumbnail">
+              <img src="img/livenation2.jpg" alt="Marketable Woman" title="Marketable Woman" >
+              <div class="overlay">
+                <a href="http://www.marketablewoman.com" target="_blank">
+                  <p>Marketable Woman- A wordpress website built using HTML5, CSS3, Javascript, PHP.</p>
+                </a>
+              </div>
+            </div>
             <div class="thumbnail">
               <img class="border" src="img/thevapegenie.jpg" alt="The Vape Genie Online Vaporize Store" title="The Vape Genie">
               <div class="overlay">
                 <a href="http://www.thevapegenie.com" target="_blank">
-                  <p>The Vape Genie- An E-commerce website built using Magento CMS, CSS3, Javascript, and Photoshop.</p>
+                  <p>The Vape Genie- A former E-commerce website built using Magento CMS, CSS3, Javascript, and Photoshop.</p>
                 </a>
               </div>
             </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+           
             <div class="thumbnail">
               <img src="img/livenation2.jpg" alt="Livenation Affiliate Website" title="Livenation Marketing Affiliate">
               <div class="overlay">
@@ -98,6 +115,14 @@
                 </a>
               </div>
             </div>
+            <div class="thumbnail">
+              <img src="img/bonjo.jpg" alt="Bonjo Coffee Roasters" title="Bonjo Coffee Roasters">
+              <div class="overlay">
+                <a href="http://www.bonjocoffee.com" target="_blank">
+                  <p>Bonjo Coffee Roasters- An E-commerce website built using Magento CMS, CSS3, Javascript, JQuery, and Photoshop.</p>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
             <div class="thumbnail">
@@ -109,7 +134,7 @@
               </div>
             </div>
             <div class="thumbnail">
-              <img class="border" src="img/hubbellrental.jpg" alt="Water Heater Rental Program" title="Hubbell Rentals">
+              <img class="border" src="img/hubbellrentals.jpg" alt="Water Heater Rental Program" title="Hubbell Rentals">
               <div class="overlay">
                 <a href="https://rentawaterheater.com" target="_blank">
                   <p>Hubbell Rentals- A business website built with HTML5, CSS3, Bootstrap 4, Javascript, and PHP.</p>
@@ -125,33 +150,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div class="thumbnail">
-              <img src="img/bonjo.jpg" alt="Bonjo Coffee Roasters" title="Bonjo Coffee Roasters">
-              <div class="overlay">
-                <a href="http://www.bonjocoffee.com" target="_blank">
-                  <p>Bonjo Coffee Roasters- An E-commerce website built using Magento CMS, CSS3, Javascript, JQuery, and Photoshop.</p>
-                </a>
-              </div>
-            </div>
-            <div class="thumbnail">
-              <img src="/img/ajaxboilerparts.jpg" alt="Ajax Boiler Parts" title="Ajax Boiler Parts">
-              <div class="overlay">
-                <a href="http://ajaxboiler.com/" target="_blank">
-                  <p>Ajax Boiler Parts-An E-commerce website built using Wordpress/Woocommerce featuring over 200 products.</p>
-                </a>
-              </div>
-            </div>
-            <div class="thumbnail">
-              <img src="img/giftcardform.jpg" alt="Giftcard for Customers" title="Giftcard Page">
-              <div class="overlay">
-                <a href="http://www.colonygrill.com/giftcard/index.php" target="_blank">
-                  <p>A gift card form created with HTML5, CSS3, Javascript (JQuery, AJAX, JSON), PHP, and Authorize.net.</p>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <button id="view-more">View Upcoming</button>
             <div class="thumbnail hide" id="upcoming">
               <img src="/img/hubbellheaters.jpg" alt="Hubbell Heaters" title="Hubbell Heaters">
@@ -161,7 +160,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

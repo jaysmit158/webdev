@@ -1,0 +1,24 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "web development portfolio site",
+  "main": "googlemap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaysmit158/webdev.git"
+  },
+  "keywords": [
+    "webdev"
+  ],
+  "author": "jordan smith",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jaysmit158/webdev/issues"
+  },
+  "homepage": "https://github.com/jaysmit158/webdev#readme",
+  "devDependencies": {
+  }
+}

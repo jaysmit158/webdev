@@ -1,5 +1,4 @@
 
-
 <div id="contact">
     <div class="wrapper">
       <div class="container-fluid bg-grey">
@@ -18,14 +17,17 @@
               <div class="row">
                 <div class="success"><?php echo $success; ?></div>
                 <div class="col-sm-6 form-group form-name">
-                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>">
+                  <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="<?php echo $name; ?>" required>
                   <span class="error"><?php echo $name_error; ?></span>
                 </div>
                 <div class="col-sm-6 form-group form-email">
-                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>">
+                  <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="<?php echo $email; ?>" required>
                   <span class="error"><?php echo $email_error; ?></span>
                 </div>
-                <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4"></textarea>
+                <div class="col-sm-12 form-group form-google">
+                  <input name="g-recaptcha-response" id="g-recaptcha-response" type="hidden">
+                </div>
+                <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required></textarea>
                <span class="error"><?php echo $message_error; ?></span>
                <div class="success"><?php echo $success; ?></div>
               </div>
@@ -48,6 +50,15 @@
   <!--Ends Contact-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=<?php echo SITE_KEY; ?>"></script>
+  <script>
+    //var submit = document.querySelector("button[type='submit']");
+    grecaptcha.ready(function() {
+      grecaptcha.execute("<?php echo SITE_KEY; ?>", {action: 'homepage'}).then(function(token) {
+        document.querySelector("#g-recaptcha-response").value = token;
+      });
+    });
+  </script>
   <script src="/typed.min.js"></script>
   <script>
   $(function() {
