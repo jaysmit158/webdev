@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Web Developer based of Fairfield County, CT designing websites and web apps">
-  <meta name="keywords" content="portfolio,CSS3,Sass,HTML5,javascript,php,jquery,gulp,bootstrap,website,ajax,magento,wordpress,woocommerce">
+  <meta name="description" content="Web Developer based of Fairfield County, CT with a focused on Javascript">
+  <meta name="keywords" content="portfolio,CSS3,Sass,HTML5,javascript,php,jquery,bootstrap,website,ajax,magento,wordpress,woocommerce,netlify,cloud,vuejs,github,firebase">
   <meta name="robots" content="follow">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -68,7 +68,7 @@
           <p> I graduated from the University of Michigan with a degree in Economics and began my career in Accounting. Accounting is an important field but it was not something I could see myself doing long term.</p>
           <p>Reminded of an old interest I began learning to code using Codecademy, FreeCodeCamp, W3 Schools, StackOverFlow, TeamTreeHouse and Github.</p>
           <p>I have a working knowledge with Front End Development including HTML5, CSS3, Sass, Javascript (ES6+), VueJS, Git, and PHP.</p>
-          <p>I currently am working to become more capable with both frontend and backend programming. I plan on learning node and python in the near future.</p>
+          <p>I currently am working to become more capable with both frontend and backend programming as well as using the cloud.</p>
         </div>
       </div>
     </div>
@@ -80,7 +80,7 @@
           <div class="row slideanim">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
               <div class="thumbnail">
-                <img class="border" src="img/thevapegenie.jpg" alt="House of Sussie" title="The Vape Genie">
+                <img class="border" src="img/house_of_sussie.jpg" alt="House of Sussie" title="House of Sussie">
                 <div class="overlay">
                   <a href="http://www.houseofsussie.com" target="_blank">
                     <p>House of Sussie- An E-commerce website built using Woocommerce</p>
@@ -88,7 +88,7 @@
                 </div>
               </div>
               <div class="thumbnail">
-                <img src="img/livenation2.jpg" alt="Marketable Woman" title="Marketable Woman" >
+                <img src="img/marketable_woman.jpg" alt="Marketable Woman" title="Marketable Woman" >
                 <div class="overlay">
                   <a href="http://www.marketablewoman.com" target="_blank">
                     <p>Marketable Woman- A wordpress website built using HTML5, CSS3, Javascript, PHP.</p>
@@ -186,47 +186,32 @@
                 <p><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
             </div>
             <div class="form-wrapper">
-                <!--<form id="contactForm" name="contactForm" method="POST" data-netlify="true">
+                <form 
+                 id="contactForm" 
+                 name="contactForm" 
+                 method="POST" 
+                 data-netlify="true"
+                 data-netlify-recaptcha="true"
+                 data-netlify-honeypot="bot-field"
+                >
                     <div class="row">
                         <div class="col-sm-6 form-group form-name">
-                            <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="" required>
+                            <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" required>
                         </div>
                         <div class="col-sm-6 form-group form-email">
-                            <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="" required>
-                        </div>
-                        <div class="col-sm-12 form-group form-google">
-                            <input name="g-recaptcha-response" id="g-recaptcha-response" type="hidden">
+                            <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" required>
                         </div>
                         <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required></textarea>
+                        <div class="hidden">
+                          <input name="bot-field">
+                        </div>
+                        <div data-netlify-recaptcha="true" class="form-row"></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12 text-center form-group">
                             <button class="btn pull-right" type="submit">Send</button>
                         </div>
                     </div>
-                </form>-->
-                <form name="contactForm" method="POST" id="contactForm" data-netlify="true">
-                    <p class="form-row">
-                        <label id="contact-form-name-label" for="contact-form-name" class="form-label">Name</label>
-                        <input type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label" class="form-input" />
-                    </p>
-                    <p class="form-row">
-                        <label id="contact-form-email-label" for="contact-form-email" class="form-label">Email address</label>
-                        <input type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label" class="form-input" />
-                    </p>
-                    <p class="form-row">
-                        <label id="contact-form-message-label" for="contact-form-message" class="form-label">Message</label>
-                        <textarea
-                            name="message"
-                            id="contact-form-message"
-                            aria-labelledby="contact-form-message-label"
-                            class="form-textarea"
-                            rows="7"
-                        ></textarea>
-                    </p>
-                    <p class="form-row form-submit">
-                        <button type="submit" class="button">Send Message</button>
-                    </p>
                 </form>
             </div>
             <!-- Ends Column -->
