@@ -300,10 +300,8 @@
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString()
-        }).then(() => console.log('Form successfully submitted')).catch((error) =>
-            alert(error))
-        }
-    });
+        }).then(() => console.log('Form successfully submitted')).catch(error => alert(error))
+    };
 
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
