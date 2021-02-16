@@ -186,7 +186,7 @@
                 <p><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
             </div>
             <div class="form-wrapper">
-                <form id="contactForm" name="contactForm" method="POST" netlify>
+                <form id="contactForm" name="contactForm" method="POST" data-netlify="true">
                     <div class="row">
                         <div class="col-sm-6 form-group form-name">
                             <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="" required>
@@ -216,15 +216,6 @@
   <!--Ends Contact-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <!--<script src="https://www.google.com/recaptcha/api.js?render= echo SITE_KEY "></script>
-  <script>
-    //var submit = document.querySelector("button[type='submit']");
-    grecaptcha.ready(function() {
-      grecaptcha.execute("<?php echo SITE_KEY; ?>", {action: 'homepage'}).then(function(token) {
-        document.querySelector("#g-recaptcha-response").value = token;
-      });
-    });
-  </script>-->
   <script src="/typed.min.js"></script>
   <script>
   $(function() {
@@ -298,7 +289,7 @@
         }).then(() => alert('Form successfully submitted')).catch(error => alert(error))
     };
 
-    document.querySelector("#contactForm").addEventListener("submit", handleSubmit);
+    //document.querySelector("#contactForm").addEventListener("submit", handleSubmit);
     
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
