@@ -4,7 +4,8 @@
   "description": "web development portfolio site",
   "main": "googlemap.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
     "url": "https://github.com/jaysmit158/webdev/issues"
   },
   "homepage": "https://github.com/jaysmit158/webdev#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "http-server": "^0.12.3"
   }
 }
