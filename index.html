@@ -216,7 +216,6 @@
             <!-- Ends Row -->
         </div>
             <!--Ends Container-->
-            <!--    <iframe id="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96084.7425935028!2d-73.26904640971898!3d41.18583963475426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e8092a96783719%3A0xdf8bfca7094fcece!2sBridgeport%2C+CT!5e0!3m2!1sen!2sus!4v1469128826454" frameborder="0" style="border:0" allowfullscreen></iframe> -->
         </div>
     </div>
   <!--Ends Contact-->
@@ -284,19 +283,19 @@
     function newTyped() { /* A new typed object */ }
 
     function foo() {
-      console.log("Callback");
+      //console.log("Callback");
     }
 
     $(".reset").click(function() {
       $("#typed").typed('reset');
     });
-
-    document.querySelector("form").addEventListener("submit", handleSubmit);
-
+</script>
+  <script>
+    document.querySelector("#contactForm").addEventListener("submit", handleSubmit);
     const handleSubmit = (e) => {
         e.preventDefault();
         let myForm = document.getElementById('contactForm');
-        let formData = new FormData(myForm)
+        let formData = new FormData(myForm);
         fetch('/', {
             method: 'POST',
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -304,20 +303,7 @@
         }).then(() => console.log('Form successfully submitted')).catch((error) =>
             alert(error))
         }
-
     });
-
-  //reveal upcoming projects
-
-  var viewMore = document.getElementById('view-more');
-  var upcoming = document.getElementById('upcoming');
-
-  viewMore.onclick = () => {
-    upcoming.classList.toggle('show');
-  }
-  </script>
-  <script>
-  // Google Analytics
 
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
