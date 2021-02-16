@@ -160,6 +160,11 @@ body {
       -webkit-animation: bounce 2s infinite;
       animation: bounce 2s infinite; }
 
+.g-recaptcha {
+  display: block;
+  margin: 15px auto;
+  width: 60%; }
+
 #about {
   margin-top: -100px;
   background-color: #f6f6f6;
