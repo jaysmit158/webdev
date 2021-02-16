@@ -186,30 +186,29 @@
                 <p><i class="fa fa-github"></i><a href="https://github.com/jaysmit158"> Jaysmit158</a></h4>
             </div>
             <div class="form-wrapper">
-                <form id="contactForm" netlify>
-                <div class="row">
+                <form id="contactForm" name="contact-jsmithwebdev" method="POST" netlify>
+                    <div class="row">
+                        <div class="success"></div>
+                        <div class="col-sm-6 form-group form-name">
+                        <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="" required>
+                        <span class="error"></span>
+                        </div>
+                        <div class="col-sm-6 form-group form-email">
+                        <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="" required>
+                        <span class="error"></span>
+                        </div>
+                        <div class="col-sm-12 form-group form-google">
+                        <input name="g-recaptcha-response" id="g-recaptcha-response" type="hidden">
+                        </div>
+                        <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required></textarea>
+                    <span class="error"></span>
                     <div class="success"></div>
-                    <div class="col-sm-6 form-group form-name">
-                    <input type="text" class="form-control" placeholder="Your Name *" id="name" name="name" value="" required>
-                    <span class="error"></span>
                     </div>
-                    <div class="col-sm-6 form-group form-email">
-                    <input type="email" class="form-control" placeholder="Your Email *" id="email" name="email" value="" required>
-                    <span class="error"></span>
+                    <div class="row">
+                        <div class="col-sm-12 text-center form-group">
+                        <button class="btn pull-right" type="submit">Send</button>
+                        </div>
                     </div>
-                    <div class="col-sm-12 form-group form-google">
-                    <input name="g-recaptcha-response" id="g-recaptcha-response" type="hidden">
-                    </div>
-                    <textarea class="form-control" placeholder="Your Message *" id="message" name="message" rows="4" required></textarea>
-                <span class="error"></span>
-                <div class="success"></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 text-center form-group">
-                    <button class="btn pull-right" type="submit">Send</button>
-                    </div>
-                </div>
-            
                 </form>
             </div>
             <!-- Ends Column -->
@@ -292,7 +291,21 @@
       $("#typed").typed('reset');
     });
 
-  });
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let myForm = document.getElementById('contactForm');
+        let formData = new FormData(myForm)
+        fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        }).then(() => console.log('Form successfully submitted')).catch((error) =>
+            alert(error))
+        }
+
+    });
 
   //reveal upcoming projects
 
